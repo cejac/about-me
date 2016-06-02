@@ -33,3 +33,11 @@ if (eyeColor.toUpperCase() === "YES" || eyeColor.toUpperCase() === "Y") {
 } else {
   alert("Wrong, " + userName + ". You don't know me at all! But lets get to know each other!");
 }
+
+var talent = prompt("Can I beatbox?");
+console.log("User input for talent: " + talent);
+if (talent.toUpperCase() === "YES" || talent.toUpperCase() === "Y") {
+  alert("I wish I was that cool " + userName + "..");
+} else {
+  alert ("That is right, " + userName + "! But it'd be cool if I could!")
+}
