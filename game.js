@@ -48,40 +48,42 @@
 //   counter++;
 // }
 //
-// var catsTotal = prompt ('How many cats do I have?'); //sixth question
-// var guesses = 4;
-// var guessLeft = 'You have ' + guesses + ' chances left';
-// console.log('User input for catsTotal' + catsTotal);
-//
-// while (guesses > 0) {
-//   if (parseInt(catsTotal) === 5) {
-//     alert ('That is correct!');
-//     counter++;
-//     break;
-//   } else if (parseInt(catsTotal) > 5) {
-//     guesses--;
-//     catsTotal = prompt('That is too many cats ' + guessLeft);
-//   } else if (parseInt(catsTotal) < 5) {
-//     guesses--;
-//     catsTotal = prompt('That is too few cats! ' + guessLeft);
-//   } else {
-//     alert ('You didn\'t guess correctly! I have 5 cats total.');
-//     break;
-//   }
-// }
+var catsTotal = prompt ('How many cats do I have?'); //sixth question
+var guesses = 4;
+var guessLeft = 'You have ' + guesses + ' chances left';
+console.log('User input for catsTotal' + catsTotal);
 
-var countries = ['PERU', 'MEXICO', 'CANADA', 'BOLIVIA'];
-var visited = prompt('Which countries have I visited?');
-
-for(i = 0; i < countries.length; i++) {
-  if (visited.toUpperCase() === countries[i]) {
-    alert('That is correct!');
-    // counter++;
+while (guesses > 0) {
+  if (parseInt(catsTotal) === 5) {
+    alert ('That is correct!');
+    counter++;
     break;
+  } else if (parseInt(catsTotal) > 5) {
+    guesses--;
+    catsTotal = prompt('That is too many cats ' + guessLeft);
+  } else if (parseInt(catsTotal) < 5) {
+    guesses--;
+    catsTotal = prompt('That is too few cats! ' + guessLeft);
   } else {
-    alert('I have not visited there yet!');
+    alert ('You didn\'t guess correctly! I have 5 cats total.');
     break;
   }
 }
 
-alert('You got ' + counter + ' out of 7 questions right!');
+// var countries = ['PERU', 'MEXICO', 'CANADA', 'BOLIVIA'];
+// var visited = prompt('Which countries have I visited?');
+// var found = false;
+//
+// for (var i = 0; i < countries.length; i++) {
+//   if (visited.toUpperCase() === countries[i]) {
+//     alert('That is correct!');
+//     found = true;
+//   }
+// }
+//
+// if (!found) {
+//   alert('That is not correct!');
+// }
+
+
+// alert('You got ' + counter + ' out of 7 questions right!');
