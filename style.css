@@ -55,5 +55,10 @@ section > ul {
   list-style-type: circle;
 }
 
-footer {
+#ten {
   background-color: #8fe6ca;
+  margin-top: 5px;
+  margin-left: 325px;
+  padding-left: 100px;
+  padding-right: 100px;
+}
