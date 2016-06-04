@@ -2,50 +2,48 @@ var userName = prompt('Hi! What\'s your name?');
 console.log('User input for userName: ' + userName);
 alert('Hello, ' + userName + '! Here\'s a page I made about me');
 
-var guess = prompt('Do I own a cat?');
 var counter = 0;
-console.log('User input for guess: ' + guess);
-if (guess.toUpperCase() === 'YES' || guess.toUpperCase() === 'Y') {
-  alert('That\'s right, ' + userName + '! But not just one!');
-  counter++;
-} else {
-  alert('Incorrect,' + userName + '!');
-}
 
-var gender = prompt('Am I a male?');
-console.log('User input for gender: ' + gender);
-if (gender.toUpperCase() === 'YES' || gender.toUpperCase() === 'Y') {
-  alert('Sorry, ' + userName + '! I am female, not male');
-} else {
-  alert('That\'s right ' + userName + '!');
-  counter++;
-}
+var questions = [
+  'Do I own a cat?',
+  'Am I a male?',
+  'Do I enjoy baking?',
+  'Do I have brown eyes?',
+  'Can I beatbox?'
+];
 
-var baking = prompt('Do I enjoy baking?');
-console.log('User input for baking: ' + baking);
-if (baking.toUpperCase() === 'YES' || baking.toUpperCase() === 'Y') {
-  alert('Correct, ' + userName + '! I\'ll bake you something!');
-  counter++;
-} else {
-  alert('That\'s incorrect, ' + userName + '!');
-}
+var ans = [
+  'YES',
+  'NO',
+  'YES',
+  'YES',
+  'NO'
+];
 
-var eyeColor = prompt('Do I have brown eyes?');
-console.log('User input for eyeColor: ' + eyeColor);
-if (eyeColor.toUpperCase() === 'YES' || eyeColor.toUpperCase() === 'Y') {
-  alert('You know me so well ' + userName + '! A little too well...');
-  counter++;
-} else {
-  alert('Wrong, ' + userName + '. You don\'t know me at all! But lets get to know each other!');
-}
+var corrAns = [
+  'That\'s right, ' + userName + '! But not just one!',
+  'That\'s right ' + userName + '!',
+  'Correct, ' + userName + '! I\'ll bake you something!',
+  'You know me so well ' + userName + '! A little too well...',
+  'That is right, ' + userName + '! But it\'d be cool if I could!'
+];
 
-var talent = prompt('Can I beatbox?');
-console.log('User input for talent: ' + talent);
-if (talent.toUpperCase() === 'YES' || talent.toUpperCase() === 'Y') {
-  alert('I wish I was that cool ' + userName + '...');
-} else {
-  alert ('That is right, ' + userName + '! But it\'d be cool if I could!');
-  counter++;
+var notAns = [
+  'Incorrect, ' + userName + '!',
+  'Sorry, ' + userName + '! I am female, not male',
+  'That\'s incorrect, ' + userName + '!',
+  'Wrong, ' + userName + '. You don\'t know me at all! But lets get to know each other!',
+  'I wish I was that cool ' + userName + '..'
+];
+
+for (var i = 0; i < questions.length; i++) {
+  var userInput = (prompt(questions[i])).toUpperCase();
+  if (userInput === ans[i]) {
+    counter++;
+    alert(corrAns[i]);
+  } else {
+    alert(notAns[i]);
+  }
 }
 
 var catsTotal = prompt('How many cats do I have between 1 and 100?'); //sixth question
@@ -70,19 +68,19 @@ if (guesses < 1) {
 }
 
 var countries = ['PERU', 'MEXICO', 'CANADA', 'BOLIVIA'];
-var visited = prompt('Which countries have I visited?');
+var visited = prompt('Guess a Country I have visited?');
 var found = false;
 
-for (var i = 0; i < countries.length; i++) {
-  if (visited.toUpperCase() === countries[i]) {
-    alert('That is correct! Here is a list of all of the countries I\'ve visted  ' + countries.toString());
+for (var j = 0; j < countries.length; j++) {
+  if (visited.toUpperCase() === countries[j]) {
+    alert('That is correct! Here is a list of all of the countries I have visted:  ' + countries.toString());
     found = true;
     counter++;
   }
 }
 
 if (!found) {
-  alert('That is not correct! Here are the countries I have visited ' + countries.toString());
+  alert('That is not correct! Here are the countries I have visited: ' + countries.toString());
 }
 
 alert('You got ' + counter + ' out of 7 questions right!');

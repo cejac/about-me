@@ -9,8 +9,6 @@ A guessing game made with javascript to get to know me, leading to my profession
 ##Purpose:
 An exercise to learn the basics of HTML, JavaScript, the terminal and Github.
 
-##
-
 ##Citations:
 https://daringfireball.net/projects/markdown/syntax
 http://colorschemedesigner.com/csd-3.5/#3731Tg5Ifw0w0
