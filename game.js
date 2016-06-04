@@ -48,26 +48,25 @@ if (talent.toUpperCase() === 'YES' || talent.toUpperCase() === 'Y') {
   counter++;
 }
 
-var catsTotal = prompt ('How many cats do I have?'); //sixth question
+var catsTotal = prompt('How many cats do I have between 1 and 100?'); //sixth question
 var guesses = 4;
-var guessLeft = 'You have ' + guesses + ' chances left';
-console.log('User input for catsTotal' + catsTotal);
 
 while (guesses > 0) {
   if (parseInt(catsTotal) === 5) {
-    alert ('That is correct!');
+    alert('That is correct!');
     counter++;
     break;
   } else if (parseInt(catsTotal) > 5) {
+    catsTotal = prompt('That is too many cats! You have ' + guesses + ' chances left.');
     guesses--;
-    catsTotal = prompt('That is too many cats ' + guessLeft);
   } else if (parseInt(catsTotal) < 5) {
+    catsTotal = prompt('That is too few cats! You have ' + guesses + ' chances left.');
     guesses--;
-    catsTotal = prompt('That is too few cats! ' + guessLeft);
-  } else {
-    alert ('You didn\'t guess correctly! I have 5 cats total.');
-    break;
   }
+}
+
+if (guesses < 1) {
+  alert('You didn\'t guess correctly! I have 5 cats total.');
 }
 
 var countries = ['PERU', 'MEXICO', 'CANADA', 'BOLIVIA'];
