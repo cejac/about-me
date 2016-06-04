@@ -92,4 +92,4 @@ qOne();
 qTwo();
 qThree();
 
-alert('You got ' + counter + ' out of 7 questions right!');
+alert('You got ' + counter + ' out of 7 questions right!\n\n Now you can see my resume.');
